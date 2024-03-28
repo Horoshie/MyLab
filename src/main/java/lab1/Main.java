@@ -1,17 +1,30 @@
 package lab1;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import static lab1.NumberUtil.isEven;
+import static lab1.NumberUtil.isPrime;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int number=8;
-        while (number%2!=0 | number%2!=1) {
-            System.out.println("Mistake! Enter a new number");
-            //ввод числа
+        int number = scanner.nextInt();
+
+        boolean finish;
+        finish = isEven(number);
+        if (finish == true) {
+            System.out.println("Number is even");
+        } else {
+            System.out.println("Number is odd");
         }
-        isPrime(number);
-        isEven(number);
+        boolean finishh;
+        finishh = isPrime(number);
+        if (finishh == true) {
+            System.out.println("Number is simple");
+        } else {
+            System.out.println("Number is composite");
+        }
     }
 
 }
