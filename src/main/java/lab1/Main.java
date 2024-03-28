@@ -2,7 +2,6 @@ package lab1;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 import static lab1.NumberUtil.isEven;
 import static lab1.NumberUtil.isPrime;
 
